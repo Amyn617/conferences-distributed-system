@@ -14,6 +14,7 @@ public class Keynote {
     private Long id;
     private String nom;
     private String prenom;
+    @Column(unique = true, nullable = false)
     private String email;
     private String fonction;
 }

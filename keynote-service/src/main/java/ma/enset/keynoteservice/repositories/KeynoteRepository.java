@@ -4,7 +4,10 @@ import ma.enset.keynoteservice.entities.Keynote;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-@RepositoryRestResource
+import java.util.Optional;
+
+@RepositoryRestResource(exported = false)
 public interface KeynoteRepository extends JpaRepository<Keynote, Long> {
-    Boolean checkIfEmailExists(String email);
+    boolean existsByEmail(String email);
+    Optional<Keynote> findByEmail(String email);
 }
