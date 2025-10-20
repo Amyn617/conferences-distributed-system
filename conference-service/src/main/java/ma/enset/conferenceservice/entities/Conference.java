@@ -2,7 +2,7 @@ package ma.enset.conferenceservice.entities;
 
 import lombok.*;
 import jakarta.persistence.*;
-import ma.enset.keynoteservice.entities.Keynote;
+import ma.enset.conferenceservice.model.Keynote;
 
 import java.util.Collection;
 import java.util.Date;

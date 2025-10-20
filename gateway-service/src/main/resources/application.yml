@@ -5,8 +5,8 @@ spring:
     gateway:
       discovery:
         locator:
-          lower-case-service-id:
-            true # lowercase service name
+          enabled: true
+          lower-case-service-id: true
     discovery:
       enabled: true
     config:

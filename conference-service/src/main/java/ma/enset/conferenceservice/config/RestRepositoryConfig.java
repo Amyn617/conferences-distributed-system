@@ -10,6 +10,6 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 public class RestRepositoryConfig implements RepositoryRestConfigurer {
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
-        config.exposeIdsFor(Conference.class);
+        config.exposeIdsFor(Conference.class, Review.class);
     }
 }
