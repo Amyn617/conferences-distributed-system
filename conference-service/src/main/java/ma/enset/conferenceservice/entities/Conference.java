@@ -13,15 +13,15 @@ public class Conference {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String titre;
-    private String type; // académique ou commerciale
+    private String type;
     private Date date;
-    private double durée;
+    private double duree;
     private Integer nombreInscrits;
     private Double score;
 
-    private Long keynoteId; // Clé étrangère vers le Keynote Service
+    private Long keynoteId;
 
-    @Transient // Indique à JPA d'ignorer ce champ dans la persistance locale [31]
+    @Transient
     private Keynote keynote;
 
     @OneToMany(mappedBy = "conference")
