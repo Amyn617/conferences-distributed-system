@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: keynote-service
+  datasource:
+    url: jdbc:h2:mem:keynotes-db
+  h2:
+    console:
+      enabled: true
+  cloud:
+    discovery:
+      enabled: true
+    config:
+      enabled: false
+  data:
+    rest:
+      base-path: /api
+server:
+  port: 8081
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true

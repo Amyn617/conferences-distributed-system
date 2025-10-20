@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Amyn617/config-conferences-app
+server:
+  port: 9999
